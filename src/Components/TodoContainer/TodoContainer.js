@@ -1,6 +1,6 @@
 import { StyledTodoContainer } from './TodoContainer.styled';
 import AddTodo from '../AddTodo/AddTodo';
-import StyledText from '../Styled/Text.styled';
+import TextButton from '../Styled/TextButton.styled';
 
 import Controls from '../Controls/Controls';
 
@@ -11,7 +11,6 @@ const TodoContainer = () => {
     <StyledTodoContainer>
       <AddTodo />
       <TodoList />
-      {/* <TodoList/> */}
     </StyledTodoContainer>
   )
 }

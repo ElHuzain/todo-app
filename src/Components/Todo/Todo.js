@@ -3,13 +3,13 @@ import { StyledCircle, StyledActivatedCircle } from '../Styled/Circle.styled';
 import { useState } from 'react';
 
 import { StyledFlex } from '../Styled/Flex.styled';
-import StyledText from '../Styled/Text.styled';
+import TextButton from '../Styled/TextButton.styled';
 import { styled } from 'styled-components';
 
 import { useDispatch } from 'react-redux';
 import { addTodo, removeTodo, switchTodoCompletion } from '../../ActionCreators';
 
-const Punja = styled(StyledText)`
+const Punja = styled(TextButton)`
 
 color: ${(props) => props.isCompleted ? props.theme.colors.theme.brightText : props.theme.colors.theme.text} !important;
 `

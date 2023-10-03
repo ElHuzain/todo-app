@@ -1,15 +1,15 @@
 import { StyledControls } from './Controls.styled'
 
-import StyledText from '../Styled/Text.styled';
+import TextButton from '../Styled/TextButton.styled';
 import { styled } from 'styled-components';
 import { StyledFlex } from '../Styled/Flex.styled';
+import Text from '../Styled/Text.styled';
+import { useSelector, useDispatch } from 'react-redux';
+import { setFilter, clearCompleted } from '../../ActionCreators';
 
-import {useSelector, useDispatch} from 'react-redux';
-import {setFilter, clearCompleted} from '../../ActionCreators';
+const Punjo = styled(TextButton)`
 
-const Punjo = styled(StyledText)`
-
-color: ${({theme}) => theme.colors.theme.brightText};
+color: ${({ theme }) => theme.colors.theme.brightText};
 
 ${props => props.chosen && ('color: ' + props.theme.colors.primary.unchecked + ';')}
 
@@ -29,7 +29,7 @@ const Controls = () => {
 
   return (
     <StyledControls>
-      <Punjo>{length} items left</Punjo>
+      <Text>{length} items left</Text>
       <StyledFlex gap="1">
         <Punjo onClick={() => changeFilter('all')} chosen={filter == 'all' && true} >All</Punjo>
         <Punjo onClick={() => changeFilter('completed')} chosen={filter == 'completed' && true}>Completed</Punjo>
