@@ -1,4 +1,4 @@
-import StyledText from '../Styled/Text.styled';
+import TextButton from '../Styled/TextButton.styled';
 import { StyledHeader } from './Header.styled';
 
 import { switchTheme } from '../../ActionCreators';
@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <StyledText color='hover' bold={true} fs="3">T O D O</StyledText>
+      <TextButton color='hover' bold={true} fs="3">T O D O</TextButton>
       <img onClick={() => { dispatcher(switchTheme()) }} src={URL} />
     </StyledHeader>
   )

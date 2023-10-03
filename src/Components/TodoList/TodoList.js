@@ -6,7 +6,7 @@ import Controls from '../Controls/Controls';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
-import StyledText from '../Styled/Text.styled';
+import Text from '../Styled/Text.styled';
 
 const TodoList = () => {
 
@@ -25,7 +25,7 @@ const TodoList = () => {
         localStorage.setItem('todos', JSON.stringify(notes));
     }, [notes])
 
-    const Empty = <div style={{margin: '60px auto'}}><StyledText>You currently have no notes.</StyledText></div>
+    const Empty = <div style={{ margin: '60px auto' }}><Text>You currently have no notes.</Text></div>
 
     return (
         <StyledTodoList>
@@ -35,33 +35,7 @@ const TodoList = () => {
             <Controls />
         </StyledTodoList >
     )
-    // return (
-    //     <DragDropContext>
-    //         <Droppable droppableId="droppable">
-    //             {(provided, snapshot) => (
-    //                 <div
-    //                     {...provided.droppableProps}
-    //                     ref={provided.innerRef}
-    //                 >
-    //                     {items.map((item, index) => (
-    //                         <Draggable key={item.id} draggableId={item.id} index={index}>
-    //                             {(provided, snapshot) => (
-    //                                 <div
-    //                                     ref={provided.innerRef}
-    //                                     {...provided.draggableProps}
-    //                                     {...provided.dragHandleProps}
-    //                                 >
-    //                                     {item.content}
-    //                                 </div>
-    //                             )}
-    //                         </Draggable>
-    //                     ))}
-    //                     {provided.placeholder}
-    //                 </div>
-    //             )}
-    //         </Droppable>
-    //     </DragDropContext>
-    // )
+
 }
 
 export default TodoList
