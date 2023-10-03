@@ -15,6 +15,7 @@ min-height: 500px;
     max-height: calc(100vh - 400px);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     overflow-y: scroll;
     gap: 1px;
 }

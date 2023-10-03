@@ -8,8 +8,8 @@ margin-bottom: 20px;
 
 img {
     object-fit: contain;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: auto 0;
     cursor: pointer;
     animation: spin 1s;

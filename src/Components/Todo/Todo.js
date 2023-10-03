@@ -9,8 +9,6 @@ import { styled } from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { addTodo, removeTodo, switchTodoCompletion } from '../../ActionCreators';
 
-import { Draggable } from 'react-beautiful-dnd';
-
 const Punja = styled(StyledText)`
 
 color: ${(props) => props.isCompleted ? props.theme.colors.theme.brightText : props.theme.colors.theme.text} !important;

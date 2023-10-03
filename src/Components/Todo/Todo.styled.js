@@ -18,6 +18,9 @@ transition: opacity .2s;
     display: unset;
 }
 
+// border-top: 1px solid black;
+border-bottom: 1px solid ${({theme}) => theme.colors.theme.brightElement};
+
 &:first-of-type{
     border-top-left-radius: ${({theme}) => theme.borderRadius};
     border-top-right-radius: ${({theme}) => theme.borderRadius};

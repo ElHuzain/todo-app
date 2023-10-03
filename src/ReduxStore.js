@@ -1,39 +1,10 @@
 import { createStore } from 'redux';
 
+const todos = JSON.parse(localStorage.getItem('todos')) || [];
+
 const initialState = {
     theme: 'dark',
-    notes: [
-        {
-            id: 0,
-            title: 'Going on & Under',
-            isCompleted: false
-        },
-        {
-            id: 1,
-            title: 'Near, far.',
-            isCompleted: true
-        },
-        {
-            id: 2,
-            title: 'Think about her just a bit more',
-            isCompleted: true
-        },
-        {
-            id: 3,
-            title: 'Study integrals and the other thing',
-            isCompleted: false
-        },
-        {
-            id: 4,
-            title: 'Rethink about her',
-            isCompleted: false
-        },
-        {
-            id: 5,
-            title: 'Sleep & think bout\'er',
-            isCompleted: true
-        },
-    ],
+    notes: todos,
     filter: 'all'
 }
 

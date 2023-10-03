@@ -4,8 +4,9 @@ import Todo from '../Todo/Todo';
 import Controls from '../Controls/Controls';
 
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import StyledText from '../Styled/Text.styled';
 
 const TodoList = () => {
 
@@ -20,10 +21,16 @@ const TodoList = () => {
         }
     })
 
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(notes));
+    }, [notes])
+
+    const Empty = <div style={{margin: '60px auto'}}><StyledText>You currently have no notes.</StyledText></div>
+
     return (
         <StyledTodoList>
             <div className='list'>
-                {elements.length < 1 ? <p>Nothing here :)</p> : elements}
+                {elements.length < 1 ? Empty : elements}
             </div>
             <Controls />
         </StyledTodoList >

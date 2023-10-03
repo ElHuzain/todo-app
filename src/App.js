@@ -8,12 +8,12 @@ import Footer from './Components/Footer/Footer.js';
 import GlobalStyles from './Components/Styled/GlobalStyles.js';
 import { ThemeProvider } from 'styled-components';
 
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 
 function App() {
 
   const mode = useSelector(val => val.theme);
-  
+
 
   const DarkThemeColors = {
     element: 'hsl(235, 24%, 19%)',
@@ -33,8 +33,8 @@ function App() {
     brightElement: 'hsl(236, 33%, 92%)',
   }
 
-  const DesktopImageSrc = `/images/bg-desktop-${mode == 'dark' ? 'dark' : 'light'}.jpg`;
-  const MobileImageSrc = `/images/bg-mobile-${mode == 'dark' ? 'dark' : 'light'}.jpg`;
+  const DesktopImageSrc = `./images/bg-desktop-${mode == 'dark' ? 'dark' : 'light'}.jpg`;
+  const MobileImageSrc = `./images/bg-mobile-${mode == 'dark' ? 'dark' : 'light'}.jpg`;
 
 
   return <>

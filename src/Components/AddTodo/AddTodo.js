@@ -1,6 +1,6 @@
 import { StyledAddTodo } from './AddTodo.style';
 import StyledText from '../Styled/Text.styled';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../../ActionCreators';
@@ -15,8 +15,18 @@ const AddTodo = () => {
     setState(value);
   }
 
-  function handleClick(e) {
-    if(state == '') return;
+  // useEffect(() => {
+  //   document.addEventListener('keydown', (e) => {
+  //     if (e.key === 'Enter') {
+  //       console.log("Eyes");
+  //       handleClick();
+  //     }
+  //   })
+  // }, [])
+
+
+  function handleClick() {
+    if (state == '') return;
     const title = state;
     dispatcher(addTodo(title));
     setState('');
@@ -24,8 +34,8 @@ const AddTodo = () => {
 
   return (
     <StyledAddTodo gap="1">
-      <input onChange={handleChange} value={state} placeholder="Type somethin'.." />
-      <StyledText onClick={handleClick}>ENTER</StyledText>
+      <input onChange={handleChange} value={state} placeholder="Type Something.." />
+      <StyledText onClick={handleClick}>ADD</StyledText>
     </StyledAddTodo>
   )
 }
